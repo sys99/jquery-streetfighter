@@ -52,3 +52,10 @@ body {
   top: 170px;
   left: 659px;
 }
+
+.instructions {
+  position:absolute;
+  z-index: 20;
+  color:#000;
+  right:20px;
+}
