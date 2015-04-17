@@ -24,21 +24,23 @@ $(document).ready(function() {
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
 		//vuelve a la posicion "listo"
+	})
+	$("body").keydown(function(x) {
+		if (x.which == 88) {
+			$(".ryu-ready").hide();
+			$(".ryu-cool").show();
+		}
+	})
+	$("body").keyup(function(x) {
+		if (x.which == 88) {
+			$(".ryu-ready").show();
+			$(".ryu-cool").hide();
+
+		}
 	});
+
 });
 
-$(document).keydown(function(event){
-	var key = (event.keyCode ? event.keyCode : event.which);
-	if(key == '88'){
-		$('.ryu-cool').show();
-	}
-});
-$(document).keyup(function(event){
-	var key = (event.keyCode ? event.keyCode : event.which);
-	if(key == '88'){
-		$('.ryu-cool').hide();
-	}
-});
 
 function playHadouken (){
 	$('#hadouken-sound')[0].volume = 0.5;
